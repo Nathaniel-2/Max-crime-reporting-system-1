@@ -1,0 +1,39 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+@import 'tw-animate-css';
+@import '@figma/astraui/styles.css';
+
+@theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-tertiary: var(--brand-tertiary);
+}
+
+:root {
+  --brand-primary: #008751; /* Nigerian Green */
+  --brand-hover: #007041;
+  --brand-dark: #005a33;
+  --brand-secondary: #cce7d9;
+  --brand-tertiary: #e6f3eb;
+  
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+.dark {
+  --brand-primary: #008751;
+  --brand-hover: #00a361;
+  --brand-dark: #00c776;
+  --brand-secondary: #1a3325;
+  --brand-tertiary: #0c1a12;
+}
+
+body {
+  font-family: var(--font-family-sans);
+}
+
+/* Hide default Astra logo in sidebar */
+nav.bg-surface-bg.w-\[60px\] > div.shrink-0:first-child {
+  display: none !important;
+}
